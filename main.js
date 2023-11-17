@@ -12,14 +12,13 @@ function init(event) {
     loadData("data.json")
 }
 
+//No hace falta que entendamos esta función todavía
 function loadData(url) {
-    let json
     fetch(url)
-        .then(response => json = response.json() )
-        .then(data => {
-            json = data 
-            console.log(json)
-        })
+        .then(response => json = response.json())
+        .then(data => pintaMisHobbies(data))
+}
 
+function pintaMisHobbies(json) {
     console.log(json)
 }
